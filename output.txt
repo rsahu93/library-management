@@ -1,0 +1,28 @@
+--- 1. Borrowing ---
+Alice borrowed: Book: Python 101 by A. Rao (ID 1)
+Could not borrow: 'Python 101' is already borrowed.
+
+--- 2. Limit and return errors ---
+Bob borrowed: Magazine: Science Today, issue 42 (ID 2)
+Could not borrow: Bob has reached the borrow limit of 1 item(s).
+Could not return: Alice has not borrowed 'The Martian'.
+Alice has: ['Python 101']
+Bob has: ['Science Today']
+Alice returned 'Python 101' 3 days late. Fee: Rs 6
+Alice has: []
+
+--- 3. Polymorphism ---
+Book: Python 101 by A. Rao (ID 1) -> late fee for 3 days: Rs 6
+Magazine: Science Today, issue 42 (ID 2) -> late fee for 3 days: Rs 3
+DVD: The Martian, 144 min (ID 3) -> late fee for 3 days: Rs 15
+
+--- 4. Class attribute ---
+Total items created: 3
+
+--- 5. Encapsulation ---
+AttributeError: 'Book' object has no attribute '__available'
+Via is_available(): True
+Magazine available? False
+
+--- 6. Abstract class ---
+TypeError: Can't instantiate abstract class LibraryItem without an implementation for abstract methods 'describe', 'late_fee'
